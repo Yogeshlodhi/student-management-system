@@ -1,9 +1,7 @@
-from fastapi import APIRouter, HTTPException, Query, Path, Depends
+from fastapi import APIRouter, HTTPException, Query, Path
 from app.crud import create_student, list_students, fetch_student, update_student, delete_student
-
-from app.models import Student, UpdateStudent, StudentResponse, StudentListResponse
+from app.models import Student, UpdateStudent, StudentListResponse
 from app.db import db 
-
 from bson import ObjectId, errors
 
 router = APIRouter(prefix="/students", tags=["Students"])
