@@ -51,7 +51,7 @@ async def update_student_by_id(id: str, updates: UpdateStudent):
         raise HTTPException(status_code=404, detail= "Student not found or no updates were made")
     # return {"message": "Student updated successfully"}
 
-@router.delete("/{id}", response_model=dict)
+@router.delete("/{id}", status_code=200)
 async def delete_student_by_id(id: str):
     if not await delete_student(db, id):
         raise HTTPException(status_code=404, detail="Student not found")
