@@ -1,0 +1,10 @@
+python -m venv assignment
+
+.\assignment\Scripts\activate
+
+pip install fastapi uvicorn motor pydantic python-dotenv
+python.exe -m pip install --upgrade pip
+
+uvicorn app.main:app --reload
+
+pip freeze > requirements.txt
