@@ -41,10 +41,7 @@ The **Student Management System API** is a backend system built with FastAPI tha
     ```bash
     .\myenv\Scripts\activate
 
-4. Install all the required dependencies/modules
+4. Install all the required dependencies/modules and test the server
   ```bash
   pip install -r requirements.txt
-
-5. Test the server
-```
   uvicorn app.main:app --reload
